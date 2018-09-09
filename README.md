@@ -1,3 +1,3 @@
-# Sites
+# Ng starter kit
 
-# Sample sites portfolio
+An opinionated ng workflow for large teams and projects
