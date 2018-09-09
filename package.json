@@ -1,0 +1,24 @@
+{
+  "name": "ng-starter-kit",
+  "version": "1.0.0",
+  "description": "An opinionated ng workflow for large teams and projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tosin17/ng-starter-kit.git"
+  },
+  "keywords": [
+    "javascript",
+    "ng",
+    "workflow"
+  ],
+  "author": "Tosin Kajopelaye-ola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tosin17/ng-starter-kit/issues"
+  },
+  "homepage": "https://github.com/Tosin17/ng-starter-kit#readme"
+}
