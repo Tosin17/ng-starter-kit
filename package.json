@@ -7,9 +7,7 @@
     "build": "webpack",
     "watch": "npm run build -- --watch",
     "start": "nodemon -w webpack.config.js -x webpack-dev-server",
-    "stats": "webpack app/app.js app/dist/app.bundle.js --json > stats.json",
-    "graph": "webpack-stats-graph",
-    "test": "karma start karma.conf.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -36,11 +34,12 @@
     "eslint": "^4.9.0",
     "nodemon": "^1.14.11",
     "webpack": "^3.12.0",
-    "webpack-dev-server": "^2.11.0",
+    "webpack-dev-server": "^2.9.2",
     "webpack-stats-graph": "^1.0.8"
   },
   "dependencies": {
     "angular": "^1.4.14",
-    "angular-ui-router": "^0.3.1"
+    "angular-ui-router": "^0.3.1",
+    "lodash": "^4.17.11"
   }
 }
