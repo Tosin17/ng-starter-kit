@@ -1,0 +1,63 @@
+digraph G {
+  graph [ rankdir = LR, splines = "ortho", fontsize = 12, label = "f4b4da0440807b3fb1f0", labelloc = "t", fontname = "gotham-book,sans-serif", compound = true ];
+  node [ fontsize = 12, width = 0, height = 0, margin = "0.2,0.1", fontname = "gotham-book,sans-serif" ];
+  edge [ fontsize = 10, fontname = "gotham-book,sans-serif" ];
+subgraph "cluster_0" {
+  graph [ label = "main [entry] [initial] - 1.2MB", fontcolor = "0,0,0.28", bgcolor = "0,0,0.95", color = "0,0,0.55" ];
+subgraph "cluster_angular-ui-router" {
+  graph [ label = "angular-ui-router", fillcolor = "0.2916666666666667,0,0.85", color = "0.2916666666666667,0,0.45", style = "filled", URL = "https://www.npmjs.com/package/angular-ui-router", target = "npm" ];
+  "./node_modules/angular-ui-router/release/angular-ui-router.js" [ fillcolor = "0,0.19,0.94", color = "0,0.73,0.71", fontcolor = "0,0.97,0.35", style = "filled", labelloc = "c", label = "{ angular-ui-router.js|0.2MB }", shape = record, URL = "https://unpkg.com/angular-ui-router/release/angular-ui-router.js", target = "_blank" ];
+}
+
+subgraph "cluster_angular" {
+  graph [ label = "angular", fillcolor = "0.2916666666666667,0,0.85", color = "0.2916666666666667,0,0.45", style = "filled", URL = "https://www.npmjs.com/package/angular", target = "npm" ];
+  "./node_modules/angular/angular.js" [ fillcolor = "0,0.19,0.94", color = "0,0.73,0.71", fontcolor = "0,0.97,0.35", style = "filled", labelloc = "c", label = "{ angular.js|1MB }", shape = record, URL = "https://unpkg.com/angular/angular.js", target = "_blank" ];
+  "./node_modules/angular/index.js" [ fillcolor = "0.2916666666666667,0.19,0.94", color = "0.2916666666666667,0.73,0.71", fontcolor = "0.2916666666666667,0.97,0.35", style = "filled", labelloc = "c", label = "{ index.js|48B }", shape = record, URL = "https://unpkg.com/angular/index.js", tooltip = "require('./angular');&#10;module.exports = angular;&#10;", target = "_blank" ];
+}
+
+  "./app/src/app-module.js" [ fillcolor = "0.16666666666666666,0.19,0.94", color = "0.16666666666666666,0.73,0.71", fontcolor = "0.16666666666666666,0.97,0.35", style = "filled", labelloc = "c", label = "{  { default  }|app-module.js|0.1KB }", shape = record, URL = "data:application/javascript;base64,aW1wb3J0IGFuZ3VsYXIgZnJvbSAnYW5ndWxhcic7CmltcG9ydCB1aVJvdXRlciBmcm9tICdhbmd1bGFyLXVpLXJvdXRlcic7CmV4cG9ydCBkZWZhdWx0IGFuZ3VsYXIubW9kdWxlKCdhcHAnLCBbdWlSb3V0ZXJdKTs=", tooltip = "import angular from 'angular';&#10;import uiRouter from 'angular-ui-router';&#10;export default angular.module('app', [uiRouter]);" ];
+  "./app/src/app.js" [ fillcolor = "0.2916666666666667,0.19,0.94", color = "0.2916666666666667,0.73,0.71", fontcolor = "0.2916666666666667,0.97,0.35", style = "filled", labelloc = "c", label = "app.js | 84B", shape = rarrow, margin = "0.15", URL = "data:application/javascript;base64,aW1wb3J0IGFwcFJvdXRlIGZyb20gJy4vcm91dGUnOwppbXBvcnQgJy4vY29tcG9uZW50cy90aWMtdGFjJzsKYXBwLmNvbmZpZyhhcHBSb3V0ZSk7", tooltip = "import appRoute from './route';&#10;import './components/tic-tac';&#10;app.config(appRoute);" ];
+  "./app/src/components/tic-tac/board/board.html" [ fillcolor = "0.2916666666666667,0.19,0.94", color = "0.2916666666666667,0.73,0.71", fontcolor = "0.2916666666666667,0.97,0.35", style = "filled", labelloc = "c", label = "{ board.html|82B }", shape = record, URL = "data:application/javascript;base64,bW9kdWxlLmV4cG9ydHMgPSAiPGRpdiBjbGFzcz1cIndyYXBwZXJcIj5cbiAgPGJvYXJkLWNlbGw+PC9ib2FyZC1jZWxsPlxuPC9kaXY+XG4iOw==", tooltip = "module.exports = \"<div class=\\\"wrapper\\\">\\n  <board-cell></board-cell>\\n</div>\\n\";" ];
+  "./app/src/components/tic-tac/board/board.js" [ fillcolor = "0.16666666666666666,0.19,0.94", color = "0.16666666666666666,0.73,0.71", fontcolor = "0.16666666666666666,0.97,0.35", style = "filled", labelloc = "c", label = "{  { default  }|board.js|0.2KB }", shape = record, URL = "data:application/javascript;base64,ZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gYm9hcmRDb250cm9sbGVyKCRzY29wZSkgewogICRzY29wZS5ib2FyZCA9ICdUZXN0IEJvYXJkJzsKICBjb25zb2xlLmxvZygkc2NvcGUuYm9hcmQsICRzY29wZS51c2VyIHx8ICdObyB1c2VyJyk7Cn0KYm9hcmRDb250cm9sbGVyLiRpbmplY3QgPSBbJyRzY29wZSddOw==", tooltip = "export default function boardController($scope) {&#10;  $scope.board = 'Test Board';&#10;  console.log($scope.board, $scope.user || 'No user');&#10;}&#10;boardController.$inject = ['$scope'];" ];
+  "./app/src/components/tic-tac/board/board.scss" [ fillcolor = "0.2916666666666667,0.19,0.94", color = "0.2916666666666667,0.73,0.71", fontcolor = "0.2916666666666667,0.97,0.35", style = "filled", labelloc = "c", label = "{ board.scss|41B }", shape = record, URL = "data:application/javascript;base64,Ly8gcmVtb3ZlZCBieSBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW4=", tooltip = "// removed by extract-text-webpack-plugin" ];
+  "./app/src/components/tic-tac/board/index.js" [ fillcolor = "0.16666666666666666,0.19,0.94", color = "0.16666666666666666,0.73,0.71", fontcolor = "0.16666666666666666,0.97,0.35", style = "filled", labelloc = "c", label = "{  { default  }|index.js|0.3KB }", shape = record, URL = "data:application/javascript;base64,LyogZXNsaW50IG5vLXVuZGVmOiAib2ZmIiAqLwppbXBvcnQgJy4vYm9hcmQuc2Nzcyc7CmltcG9ydCB0ZW1wbGF0ZSBmcm9tICcuL2JvYXJkLmh0bWwnOwppbXBvcnQgYm9hcmRDb250cm9sbGVyIGZyb20gJy4vYm9hcmQnOwoKZnVuY3Rpb24gYm9hcmQoKSB7CiAgcmV0dXJuIHsKICAgIHNjb3BlOiB7CiAgICAgIHVzZXI6ICdAJwogICAgfSwKICAgIHJlc3RyaWN0OiAnRUEnLAogICAgY29udHJvbGxlcjogYm9hcmRDb250cm9sbGVyLAogICAgdGVtcGxhdGU6IHRlbXBsYXRlCiAgfTsKfQoKZXhwb3J0IGRlZmF1bHQgYXBwLmRpcmVjdGl2ZSgnYm9hcmQnLCBib2FyZCk7", tooltip = "/* eslint no-undef: \"off\" */&#10;import './board.scss';&#10;import template from './board.html';&#10;import boardController from './board';&#10;&#10;function board() {&#10;  return {&#10;    scope: {&#10;      user: '@'&#10;    },&#10;    restrict: 'EA',&#10;    controller: boardController,&#10;    template: template&#10;  };&#10;}&#10;&#10;export default app.directive('board', board);" ];
+  "./app/src/components/tic-tac/cell/cell.html" [ fillcolor = "0.16666666666666666,0.19,0.94", color = "0.16666666666666666,0.73,0.71", fontcolor = "0.16666666666666666,0.97,0.35", style = "filled", labelloc = "c", label = "{ cell.html|0.1KB }", shape = record, URL = "data:application/javascript;base64,bW9kdWxlLmV4cG9ydHMgPSAiPHZpZGVvIGlkPVwidmlkXCJcbiAgICAgICBzcmM9XCJodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVA0bU9GYTVGWDkwXCJcbiAgICAgICBjb250cm9sc1xuICAgICAgIHByZWxvYWQ9XCJub25lXCI+PC92aWRlbz5cbiI7", tooltip = "module.exports = \"<video id=\\\"vid\\\"\\n       src=\\\"https://www.youtube.com/watch?v=P4mOFa5FX90\\\"\\n       controls\\n       preload=\\\"none\\\"></video>\\n\";" ];
+  "./app/src/components/tic-tac/cell/index.js" [ fillcolor = "0.16666666666666666,0.19,0.94", color = "0.16666666666666666,0.73,0.71", fontcolor = "0.16666666666666666,0.97,0.35", style = "filled", labelloc = "c", label = "{  { default  }|index.js|0.3KB }", shape = record, URL = "data:application/javascript;base64,aW1wb3J0IHRlbXBsYXRlIGZyb20gJy4vY2VsbC5odG1sJzsKCmZ1bmN0aW9uIGNlbGwoKSB7CiAgcmV0dXJuIHsKICAgIHJlc3RyaWN0OiAnRUEnLAogICAgdGVtcGxhdGU6IHRlbXBsYXRlLAogICAgY29udHJvbGxlcjogZnVuY3Rpb24gY29udHJvbGxlcigpIHsKICAgICAgY29uc29sZS5sb2coJ0NFRUVFTExMTEwhISEnKTsKICAgIH0KICB9Owp9IC8vY2VsbC4kaW5qZWN0ID0gWyckc2NvcGUnXTsKCgpleHBvcnQgZGVmYXVsdCBhcHAuZGlyZWN0aXZlKCdib2FyZENlbGwnLCBjZWxsKTs=", tooltip = "import template from './cell.html';&#10;&#10;function cell() {&#10;  return {&#10;    restrict: 'EA',&#10;    template: template,&#10;    controller: function controller() {&#10;      console.log('CEEEELLLLL!!!');&#10;    }&#10;  };&#10;} //cell.$inject = ['$scope'];&#10;&#10;&#10;export default app.directive('boardCell', cell);" ];
+  "./app/src/components/tic-tac/index.js" [ fillcolor = "0.2916666666666667,0.19,0.94", color = "0.2916666666666667,0.73,0.71", fontcolor = "0.2916666666666667,0.97,0.35", style = "filled", labelloc = "c", label = "{ index.js|34B }", shape = record, URL = "data:application/javascript;base64,aW1wb3J0ICcuL2NlbGwnOwppbXBvcnQgJy4vYm9hcmQnOw==", tooltip = "import './cell';&#10;import './board';" ];
+  "./app/src/route.js" [ fillcolor = "0.16666666666666666,0.19,0.94", color = "0.16666666666666666,0.73,0.71", fontcolor = "0.16666666666666666,0.97,0.35", style = "filled", labelloc = "c", label = "{  { default  }|route.js|0.2KB }", shape = record, URL = "data:application/javascript;base64,ZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gYXBwUm91dGUoJHN0YXRlUHJvdmlkZXIpIHsKICAkc3RhdGVQcm92aWRlci5zdGF0ZSgndGljVGFjJywgewogICAgdXJsOiAnLycsCiAgICB0ZW1wbGF0ZTogJzxib2FyZCB1c2VyPSJUYWRlIj48L2JvYXJkPicKICB9KTsKfQphcHBSb3V0ZS4kaW5qZWN0ID0gWyckc3RhdGVQcm92aWRlciddOw==", tooltip = "export default function appRoute($stateProvider) {&#10;  $stateProvider.state('ticTac', {&#10;    url: '/',&#10;    template: '<board user=\"Tade\"></board>'&#10;  });&#10;}&#10;appRoute.$inject = ['$stateProvider'];" ];
+  "cluster_0hidden" [ style = "invis", label = "", fixedsize = true, margin = "0", width = 0, height = 0 ];
+}
+
+  "file_app.bundle.js" [ labelloc = "c", label = "{ app.bundle.js|1.2MB }", shape = record, fillcolor = "0.625,0.19,0.94", color = "0.625,0.73,0.71", fontcolor = "0.625,0.97,0.35", style = "filled" ];
+  "file_style.css" [ labelloc = "c", label = "{ style.css|49B }", shape = record, fillcolor = "0.625,0.19,0.94", color = "0.625,0.73,0.71", fontcolor = "0.625,0.97,0.35", style = "filled" ];
+  "./app/src/app.js";
+  "./app/src/app-module.js";
+  "./app/src/components/tic-tac/board/index.js";
+  "./app/src/components/tic-tac/cell/index.js";
+  "./app/src/components/tic-tac/board/board.html";
+  "./app/src/components/tic-tac/board/board.js";
+  "./app/src/components/tic-tac/board/board.scss";
+  "./app/src/components/tic-tac/index.js";
+  "./app/src/components/tic-tac/cell/cell.html";
+  "./app/src/route.js";
+  "./node_modules/angular-ui-router/release/angular-ui-router.js";
+  "./node_modules/angular/index.js";
+  "./node_modules/angular/angular.js";
+  "cluster_0hidden";
+  "./app/src/app.js" -> "./app/src/app-module.js" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./app/src/components/tic-tac/board/index.js" -> "./app/src/app-module.js" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./app/src/components/tic-tac/cell/index.js" -> "./app/src/app-module.js" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./app/src/components/tic-tac/board/index.js" -> "./app/src/components/tic-tac/board/board.html" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./app/src/components/tic-tac/board/index.js" -> "./app/src/components/tic-tac/board/board.js" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./app/src/components/tic-tac/board/index.js" -> "./app/src/components/tic-tac/board/board.scss" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./app/src/components/tic-tac/index.js" -> "./app/src/components/tic-tac/board/index.js" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./app/src/components/tic-tac/cell/index.js" -> "./app/src/components/tic-tac/cell/cell.html" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./app/src/components/tic-tac/index.js" -> "./app/src/components/tic-tac/cell/index.js" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./app/src/app.js" -> "./app/src/components/tic-tac/index.js" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./app/src/app.js" -> "./app/src/route.js" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./app/src/app-module.js" -> "./node_modules/angular-ui-router/release/angular-ui-router.js" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./node_modules/angular/index.js" -> "./node_modules/angular/angular.js" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "./app/src/app-module.js" -> "./node_modules/angular/index.js" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "cluster_0hidden" -> "file_app.bundle.js" [ arrowsize = .75, color = "0.625,0.73,0.71", ltail = "cluster_0" ];
+  "cluster_0hidden" -> "file_style.css" [ arrowsize = .75, color = "0.625,0.73,0.71", ltail = "cluster_0" ];
+}

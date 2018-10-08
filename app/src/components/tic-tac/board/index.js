@@ -6,6 +6,9 @@ import boardController from  './board';
 
 function board() {
   return {
+    scope: {
+      user: '@'
+    },
     restrict: 'EA',
     controller: boardController,
     template

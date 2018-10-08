@@ -7,7 +7,8 @@
     "build": "webpack",
     "watch": "npm run build -- --watch",
     "start": "nodemon -w webpack.config.js -x webpack-dev-server",
-    "test": "jest"
+    "test": "jest",
+    "stats": "bin/stats.sh"
   },
   "repository": {
     "type": "git",

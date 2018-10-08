@@ -1,6 +1,5 @@
 export default function boardController($scope) {
-  $scope.board = 'Test Board';
-  console.log($scope.board);
+  console.log($scope.user || 'No user');
 }
 
 boardController.$inject = ['$scope'];

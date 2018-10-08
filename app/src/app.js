@@ -1,5 +1,7 @@
-import app from './app-module';
+import '../base.scss';
+
 import appRoute from './route';
-import './components/tic-tac/board';
+import './components/nav'
+import './components/tic-tac';
 
 app.config(appRoute);
