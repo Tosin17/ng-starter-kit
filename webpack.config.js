@@ -50,6 +50,9 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
+        new webpack.ProvidePlugin({
+          app: [path.resolve(__dirname, 'app/src/app-module.js'), 'default']
+        }),
         new ExtractTextPlugin({
           filename: 'style.css',
           disable: false,

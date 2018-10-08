@@ -3,7 +3,7 @@ export default function appRoute($stateProvider) {
     state('ticTac', {
       url: '/',
       template: '<board></board>'
-  })
+    });
 }
 
 appRoute.$inject = ['$stateProvider'];

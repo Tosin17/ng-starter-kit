@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "cb2138358be1b90fc502"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "26ddf127efad6f5ac553"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -731,13 +731,14 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__("./node_modules/angular/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_ui_router__ = __webpack_require__("./node_modules/angular-ui-router/release/angular-ui-router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_ui_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular_ui_router__);
 
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_angular___default.a.module('app', [__WEBPACK_IMPORTED_MODULE_1_angular_ui_router___default.a]));
+/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0_angular___default.a.module('app', [__WEBPACK_IMPORTED_MODULE_1_angular_ui_router___default.a]));
 
 /***/ }),
 
@@ -752,7 +753,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-__WEBPACK_IMPORTED_MODULE_0__app_module__["a" /* default */].config(__WEBPACK_IMPORTED_MODULE_1__route__["a" /* default */]);
+__WEBPACK_IMPORTED_MODULE_0__app_module__["default"].config(__WEBPACK_IMPORTED_MODULE_1__route__["a" /* default */]);
 
 /***/ }),
 
@@ -779,7 +780,7 @@ boardController.$inject = ['$scope'];
 /***/ "./app/src/components/tic-tac/board/board.scss":
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type.\n| .wrapper {\n|   color: blue;\n|   font-size: larger;");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -787,13 +788,12 @@ throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an ap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_module__ = __webpack_require__("./app/src/app-module.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__board_scss__ = __webpack_require__("./app/src/components/tic-tac/board/board.scss");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__board_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__board_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__board_html__ = __webpack_require__("./app/src/components/tic-tac/board/board.html");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__board_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__board_html__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__board__ = __webpack_require__("./app/src/components/tic-tac/board/board.js");
-
+/* WEBPACK VAR INJECTION */(function(app) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__board_scss__ = __webpack_require__("./app/src/components/tic-tac/board/board.scss");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__board_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__board_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__board_html__ = __webpack_require__("./app/src/components/tic-tac/board/board.html");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__board_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__board_html__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__board__ = __webpack_require__("./app/src/components/tic-tac/board/board.js");
+/* eslint no-undef: "off" */
 
 
 
@@ -801,12 +801,13 @@ throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an ap
 function board() {
   return {
     restrict: 'EA',
-    controller: __WEBPACK_IMPORTED_MODULE_3__board__["a" /* default */],
-    template: __WEBPACK_IMPORTED_MODULE_2__board_html___default.a
+    controller: __WEBPACK_IMPORTED_MODULE_2__board__["a" /* default */],
+    template: __WEBPACK_IMPORTED_MODULE_1__board_html___default.a
   };
 }
 
-/* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0__app_module__["a" /* default */].directive('board', board));
+/* unused harmony default export */ var _unused_webpack_default_export = (app.directive('board', board));
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./app/src/app-module.js")))
 
 /***/ }),
 
