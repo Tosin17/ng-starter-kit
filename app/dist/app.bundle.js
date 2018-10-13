@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f4b4da0440807b3fb1f0"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0ae4a5ff5e77cd4d1b4f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -727,6 +727,13 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/base.scss":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./app/src/app-module.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -747,19 +754,61 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(app) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__route__ = __webpack_require__("./app/src/route.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_tic_tac__ = __webpack_require__("./app/src/components/tic-tac/index.js");
+/* WEBPACK VAR INJECTION */(function(app) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__base_scss__ = __webpack_require__("./app/base.scss");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__base_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__base_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__route__ = __webpack_require__("./app/src/route.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_nav__ = __webpack_require__("./app/src/components/nav/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_tic_tac__ = __webpack_require__("./app/src/components/tic-tac/index.js");
 
 
-app.config(__WEBPACK_IMPORTED_MODULE_0__route__["a" /* default */]);
+
+
+app.config(__WEBPACK_IMPORTED_MODULE_1__route__["a" /* default */]);
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./app/src/app-module.js")["default"]))
+
+/***/ }),
+
+/***/ "./app/src/components/nav/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(app) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__nav_scss__ = __webpack_require__("./app/src/components/nav/nav.scss");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__nav_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__nav_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nav_html__ = __webpack_require__("./app/src/components/nav/nav.html");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nav_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__nav_html__);
+
+
+
+function appNav() {
+  return {
+    restrict: 'E',
+    template: __WEBPACK_IMPORTED_MODULE_1__nav_html___default.a
+  };
+}
+
+app.directive('appNav', appNav);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./app/src/app-module.js")["default"]))
+
+/***/ }),
+
+/***/ "./app/src/components/nav/nav.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ul class=\"app-nav\">\n  <li ui-sref=\"ticTac\" class=\"app-nav__li\">Home</li>\n  <li ui-sref=\"questions\" class=\"app-nav__li\">Questionnaire</li>\n</ul>\n";
+
+/***/ }),
+
+/***/ "./app/src/components/nav/nav.scss":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
 /***/ "./app/src/components/tic-tac/board/board.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\">\n  <board-cell></board-cell>\n</div>\n";
+module.exports = "<div class=\"wrapper\">\n  <board-cell spacebar-support></board-cell>\n</div>\n";
 
 /***/ }),
 
@@ -769,8 +818,7 @@ module.exports = "<div class=\"wrapper\">\n  <board-cell></board-cell>\n</div>\n
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = boardController;
 function boardController($scope) {
-  $scope.board = 'Test Board';
-  console.log($scope.board, $scope.user || 'No user');
+  console.log($scope.user || 'No user');
 }
 boardController.$inject = ['$scope'];
 
@@ -816,7 +864,14 @@ function board() {
 /***/ "./app/src/components/tic-tac/cell/cell.html":
 /***/ (function(module, exports) {
 
-module.exports = "<video id=\"vid\"\n       src=\"https://www.youtube.com/watch?v=P4mOFa5FX90\"\n       controls\n       preload=\"none\"></video>\n";
+module.exports = "<div class=\"cell\">\n  <video id=\"vid\"\n         controls\n         preload=\"none\"\n         class=\"cell__video\">\n    <source src=\"../../../../resources/gawi.mp4\" type=\"video/mp4\">\n    Your browser does not support HTML5 video.\n  </video>\n</div>\n";
+
+/***/ }),
+
+/***/ "./app/src/components/tic-tac/cell/cell.scss":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -826,18 +881,19 @@ module.exports = "<video id=\"vid\"\n       src=\"https://www.youtube.com/watch?
 "use strict";
 /* WEBPACK VAR INJECTION */(function(app) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cell_html__ = __webpack_require__("./app/src/components/tic-tac/cell/cell.html");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cell_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cell_html__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cell_scss__ = __webpack_require__("./app/src/components/tic-tac/cell/cell.scss");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__cell_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__cell_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__spacebar_support__ = __webpack_require__("./app/src/components/tic-tac/spacebar-support/index.js");
+
+
 
 
 function cell() {
   return {
-    restrict: 'EA',
-    template: __WEBPACK_IMPORTED_MODULE_0__cell_html___default.a,
-    controller: function controller() {
-      console.log('CEEEELLLLL!!!');
-    }
+    restrict: 'E',
+    template: __WEBPACK_IMPORTED_MODULE_0__cell_html___default.a
   };
-} //cell.$inject = ['$scope'];
-
+}
 
 /* unused harmony default export */ var _unused_webpack_default_export = (app.directive('boardCell', cell));
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./app/src/app-module.js")["default"]))
@@ -855,6 +911,51 @@ function cell() {
 
 /***/ }),
 
+/***/ "./app/src/components/tic-tac/spacebar-support/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(app) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__spacebar_support__ = __webpack_require__("./app/src/components/tic-tac/spacebar-support/spacebar-support.js");
+
+
+function spacebarSupport() {
+  return {
+    restrict: 'A',
+    scope: true,
+    link: __WEBPACK_IMPORTED_MODULE_0__spacebar_support__["a" /* default */]
+  };
+}
+
+/* unused harmony default export */ var _unused_webpack_default_export = (app.directive('spacebarSupport', spacebarSupport));
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./app/src/app-module.js")["default"]))
+
+/***/ }),
+
+/***/ "./app/src/components/tic-tac/spacebar-support/spacebar-support.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = spacebarSupport;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__("./node_modules/angular/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
+
+function spacebarSupport($scope, el) {
+  var $ = __WEBPACK_IMPORTED_MODULE_0_angular___default.a.element;
+  var vid = el[0];
+  $(document.body).on('keypress', function (evt) {
+    if (evt.keyCode === 32) {
+      if (vid.pause) {
+        vid.play();
+      } else {
+        vid.pause();
+      }
+    }
+  });
+}
+spacebarSupport.$inject = ['$scope'];
+
+/***/ }),
+
 /***/ "./app/src/route.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -864,6 +965,9 @@ function appRoute($stateProvider) {
   $stateProvider.state('ticTac', {
     url: '/',
     template: '<board user="Tade"></board>'
+  }).state('questions', {
+    url: '/questionnaire',
+    template: '<h1>Questions</h1>'
   });
 }
 appRoute.$inject = ['$stateProvider'];

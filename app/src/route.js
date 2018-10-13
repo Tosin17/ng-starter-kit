@@ -2,11 +2,11 @@ export default function appRoute($stateProvider) {
   $stateProvider.
     state('ticTac', {
       url: '/',
-      template: '<board user="Tade"></board>'
+      template: '<board></board>'
     })
     .state('questions', {
       url: '/questionnaire',
-      template: '<h1>Questions</h1>'
+      template: '<questionaire></questionaire>'
     });
 }
 

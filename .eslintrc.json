@@ -9,7 +9,7 @@
     },
     "rules": {
         "no-console":"off",
-        "object-curly-spacing": ["error", "always"],
+        "object-curly-spacing": "off",
         "arrow-spacing": ["error", { "before": true, "after": true }],
         "indent": [
             "error",
