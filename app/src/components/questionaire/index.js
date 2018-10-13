@@ -1,7 +1,7 @@
-import './questionaire.scss'
+import './questionaire.scss';
 import template from './questionaire.html';
 import questionaireCtrl from './questionaire-ctrl';
-import './my-question'
+import './my-question';
 
 function questionaire() {
   return {
@@ -12,7 +12,7 @@ function questionaire() {
     controller: questionaireCtrl,
     transclude: true,
     template
-  }
+  };
 }
 
 app.directive('questionaire', questionaire);

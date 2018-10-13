@@ -5,7 +5,7 @@ function spacebarSupport() {
     restrict: 'A',
     scope: true,
     link: spaceBarSupportCtrl
-  }
+  };
 }
 
 export default app.directive('spacebarSupport', spacebarSupport);

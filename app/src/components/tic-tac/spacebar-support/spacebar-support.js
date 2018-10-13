@@ -12,7 +12,7 @@ export default function spacebarSupport($scope, el) {
         vid.pause();
       }
     }
-  })
+  });
 }
 
 spacebarSupport.$inject = ['$scope'];

@@ -5,7 +5,7 @@ export default function questionaireCtrl($scope) {
   };
 
   $scope.yes = () => console.log('YES');
-  $scope.nope = () => console.log('NO')
+  $scope.nope = () => console.log('NO');
 
 }
 

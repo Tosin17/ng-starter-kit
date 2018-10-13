@@ -7,6 +7,10 @@ export default function appRoute($stateProvider) {
     .state('questions', {
       url: '/questionnaire',
       template: '<questionaire></questionaire>'
+    })
+    .state('infoCards', {
+      url: '/info-cards',
+      template:'<info-card></info-card>'
     });
 }
 

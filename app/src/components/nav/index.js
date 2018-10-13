@@ -5,7 +5,7 @@ function appNav() {
   return {
     restrict: 'E',
     template
-  }
+  };
 }
 
 app.directive('appNav', appNav);

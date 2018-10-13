@@ -1,0 +1,26 @@
+.info-card {
+  width: 40%;
+  margin: auto;
+  padding-top: 1rem;
+
+  li {
+    list-style-type: none;
+  }
+
+  .user-warning {
+    color: yellow;
+  }
+
+  .user-problem {
+    color: orange;
+  }
+
+  .user-error {
+    color: red;
+  }
+
+  .user-ok {
+
+  }
+
+}
