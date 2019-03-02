@@ -12,11 +12,5 @@ module.exports = {
              //useBuiltIns: 'usage'
          }]
      ],
- plugins: [
-     ['@babel/plugin-transform-runtime', {
-         helpers: true,
-         polyfill: true,
-         regenerator: true
-     }]
- ]
+ plugins: []
 };
