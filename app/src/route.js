@@ -1,16 +1,16 @@
 export default function appRoute($stateProvider) {
   $stateProvider.
-    state('ticTac', {
+    state('state1', {
       url: '/',
-      template: '<board></board>'
+      template: '<h1>State 1</h1>'
     })
-    .state('questions', {
-      url: '/questionnaire',
-      template: '<questionaire></questionaire>'
+    .state('state2', {
+      url: '/state2',
+      template: '<h1>State 2</h1>'
     })
-    .state('infoCards', {
-      url: '/info-cards',
-      template:'<info-card></info-card>'
+    .state('state3', {
+      url: '/state3',
+      template:'<h1>State 3</h1>'
     });
 }
 
