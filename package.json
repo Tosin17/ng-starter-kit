@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Tosin17/ng-starter-kit#readme",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.41",
+    "@babel/core": "^7.20.7",
     "@babel/plugin-transform-runtime": "^7.0.0-beta.32",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
@@ -41,7 +41,7 @@
     "nodemon": "^1.14.11",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
-    "webpack": "^3.12.0",
+    "webpack": "^5.75.0",
     "webpack-dev-server": "^2.9.2",
     "webpack-stats-graph": "^1.0.8"
   },
